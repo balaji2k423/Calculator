@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS-Style Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calculator">
+    <div class="calculator-screen">
+        <input type="text" id="display" disabled>
+    </div>
+
+    <div class="calculator-keys">
+        <!-- Function buttons -->
+        <button class="function" onclick="scientificFunction('2nd')">2nd</button>
+        <button class="function" onclick="scientificFunction('square')">x²</button>
+        <button class="function" onclick="scientificFunction('cube')">x³</button>
+        <button class="function" onclick="scientificFunction('exp')">eˣ</button>
+        <button class="function" onclick="scientificFunction('tenExp')">10ˣ</button>
+        
+        <button class="function" onclick="scientificFunction('inv')">1/x</button>
+        <button class="function" onclick="scientificFunction('sqrt')">√x</button>
+        <button class="function" onclick="scientificFunction('cbrt')">∛x</button>
+        <button class="function" onclick="scientificFunction('ln')">ln</button>
+        <button class="function" onclick="scientificFunction('log')">log₁₀</button>
+        
+        <!-- Operators & Numbers -->
+        <button class="function" onclick="scientificFunction('sin')">sin</button>
+        <button class="function" onclick="scientificFunction('cos')">cos</button>
+        <button class="function" onclick="scientificFunction('tan')">tan</button>
+        <button class="function" onclick="scientificFunction('pi')">π</button>
+        <button class="operator" onclick="inputOperator('÷')">÷</button>
+
+        <button onclick="inputNumber('7')">7</button>
+        <button onclick="inputNumber('8')">8</button>
+        <button onclick="inputNumber('9')">9</button>
+        <button class="operator" onclick="inputOperator('×')">×</button>
+
+        <button onclick="inputNumber('4')">4</button>
+        <button onclick="inputNumber('5')">5</button>
+        <button onclick="inputNumber('6')">6</button>
+        <button class="operator" onclick="inputOperator('−')">−</button>
+
+        <button onclick="inputNumber('1')">1</button>
+        <button onclick="inputNumber('2')">2</button>
+        <button onclick="inputNumber('3')">3</button>
+        <button class="operator" onclick="inputOperator('+')">+</button>
+
+        <button onclick="inputNumber('0')" class="zero">0</button>
+        <button onclick="inputNumber('.')">.</button>
+        
+        <!-- New Clear, Delete, CE, Equals -->
+        <button onclick="clearAll()" class="clear">C</button>
+        <button onclick="clearEntry()" class="clear">CE</button>
+        <button onclick="deleteLast()" class="clear">Del</button>
+        <button class="equals" onclick="calculate()">=</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
